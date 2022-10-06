@@ -1,4 +1,4 @@
-package servicios;
+package sistema.contable.SistemC.servicios.personas;
 
 import java.util.List;
 import sistema.contable.SistemC.modelo.personas.Personas;

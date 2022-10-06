@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author juank
  */
-public interface UsuarioRepository extends CrudRepository<Personas, Long>
+public interface PersonasRepository extends CrudRepository<Personas, Long>
 {
     
 }
