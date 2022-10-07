@@ -27,8 +27,8 @@ public class TipoPersona implements Serializable
   @Column(name = "descripcion", nullable = false,length = 40)
   private String descripcion;
   
-  @ManyToOne
-  private Personas persona;
+  //@ManyToOne
+  //private Personas persona;
 
       
 }

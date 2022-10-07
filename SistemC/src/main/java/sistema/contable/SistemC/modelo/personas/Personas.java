@@ -40,12 +40,12 @@ public class Personas implements Serializable
   private String correo;
   @Column(name = "telefono",nullable = false, length = 30)
   private String telefono;
-  @Column(name = "tipo",nullable = false, length = 30)
-  private Integer tipo;
+  @Column(name = "tipo",nullable = false, length = 15)
+  private String tipo;
   @Column(name = "obligacionf",nullable = false, length = 10)
   private String obligacionf;
   
-  @OneToMany(mappedBy = "persona",cascade = CascadeType.ALL)
-  private Set<TipoPersona> tipos = new HashSet<>() ;
+  //@OneToMany(mappedBy = "persona",cascade = CascadeType.ALL)
+  //private Set<TipoPersona> tipos = new HashSet<>() ;
 
 }
