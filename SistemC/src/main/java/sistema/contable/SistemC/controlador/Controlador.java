@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import sistema.contable.SistemC.modelo.personas.TipoPersona;
 import sistema.contable.SistemC.servicios.personas.PersonasImpl;
 import sistema.contable.SistemC.servicios.personas.TipoPersonaImpl;
 
