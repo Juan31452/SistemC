@@ -8,8 +8,8 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>mintic.grupo61</groupId>
-	<artifactId>CovidCol</artifactId>
+	<groupId>sistema.contable</groupId>
+	<artifactId>SistemaC</artifactId>
 	<version>1.0</version>
 	<name>SistemaC</name>
 	<description>Demo project for Spring Boot</description>
@@ -63,19 +63,7 @@
                     <artifactId>mysql-connector-java</artifactId>
                     <scope>runtime</scope>
                 </dependency> 
-                
-                <!-- SQLITE Database library 
-                <dependency>
-                        <groupId>com.zsoltfabok</groupId>
-                        <artifactId>sqlite-dialect</artifactId>
-                        <version>1.0</version>
-                </dependency>
-                <dependency>
-                        <groupId>org.xerial</groupId>
-                        <artifactId>sqlite-jdbc</artifactId>
-                        <version>3.25.2</version>
-                </dependency>-->
-                
+                                
                 <!-- Introduce jquery-webjar-->
         <dependency>
             <groupId>org.webjars</groupId>
@@ -96,12 +84,29 @@
         </dependency>
         
         <dependency>
-           <groupId>org.springframework.boot</groupId>
-           <artifactId>spring-boot-starter-security</artifactId>
+	  <groupId>org.springframework.security</groupId>
+	  <artifactId>spring-security-web</artifactId>
+	  <version>5.7.3</version>
         </dependency>
-                        
+           
+         <dependency>
+           <groupId>org.springframework.security</groupId>
+           <artifactId>spring-security-config</artifactId>
+           <version>5.7.3</version>
+        </dependency>
+	 
+            <dependency>
+                <groupId>org.thymeleaf.extras</groupId>
+                <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.thymeleaf</groupId>
+                <artifactId>thymeleaf-spring5</artifactId>
+            </dependency>
+            
         </dependencies>
-
+        
 	<build>
 		<plugins>
 			<plugin>

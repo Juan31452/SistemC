@@ -1,4 +1,4 @@
-package sistema.contable.SistemC.modelo.personas;
+package sistema.contable.SistemC.modelo.clientes;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -20,14 +20,14 @@ import lombok.Data;
 
 @Data // se encarga de los getters y setters
 @Entity
-@Table(name = "personas")
+@Table(name = "clientes")
 
-public class Personas implements Serializable
+public class Clientes implements Serializable
 {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "idpersonas")
-  private Long idpersonas;
+  @Column(name = "id")
+  private Long id;
   @Column(name = "cc_nit", nullable = false,length = 40)
   private String cc_nit;        
   @Column(name = "nombres", nullable = false,length = 50)
@@ -38,10 +38,8 @@ public class Personas implements Serializable
   private String direccion;
   @Column(name = "correo" ,nullable = false,length = 30)
   private String correo;
-  @Column(name = "telefono",nullable = false, length = 30)
+  @Column(name = "telefono",length = 30)
   private String telefono;
-  @Column(name = "tipo",nullable = false, length = 15)
-  private String tipo;
   @Column(name = "obligacionf",nullable = false, length = 10)
   private String obligacionf;
   

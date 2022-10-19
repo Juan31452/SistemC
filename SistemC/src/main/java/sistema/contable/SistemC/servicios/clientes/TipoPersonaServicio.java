@@ -1,7 +1,7 @@
-package sistema.contable.SistemC.servicios.personas;
+package sistema.contable.SistemC.servicios.clientes;
 
 import java.util.List;
-import sistema.contable.SistemC.modelo.personas.TipoPersona;
+import sistema.contable.SistemC.modelo.clientes.TipoPersona;
 
 /**
  *

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    
     <head>
         <title>INICIO</title>
         <meta charset="UTF-8">
@@ -7,7 +9,7 @@
     </head>
     <body>
              <div>
-                
+                 <!--                 
                 <form method="POST"  >
                     <div class="">
                       USUARIO:</br> 
@@ -23,6 +25,31 @@
                     </div>      
                     <h5>Registrar <a th:href="@{/adicionar}" >usuario</a>.</h5>
                 </form>
+                 
+                 -->
+                <div sec:authorize="isAuthenticated()">
+                   Hola <span sec:authentication="name"></span><br>
+                   Rol: <span sec:authentication="principal.authorities"></span>
+                </div>
+                 <div sec:authorize="hasRole('admin')">
+                    <h5>Administracion <a th:href="@{/adminautenticado}" >admin</a>.</h5>
+                </div>
+                <br>
+                 
+                <br>
+                <div sec:authorize = "hasRole('aux')">
+                 
+                        <h5>Auxiliar.</h5>
+                </div>
+                
+                
+                
+                <div sec:authorize="isAuthenticated()"> 
+                <form th:action="@{/logout}" method="post">
+                      <input type="submit" value="CERRAR SESION">
+                   </form>
+                </div>
+                 
             </div>         
        
     </body>

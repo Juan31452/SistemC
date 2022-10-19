@@ -1,4 +1,4 @@
-package sistema.contable.SistemC.modelo.personas;
+package sistema.contable.SistemC.modelo.clientes;
 
 import org.springframework.data.repository.CrudRepository;
 

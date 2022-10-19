@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>ADICIONAR USUARIOS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form method="POST" th:action="@{/guardarusuario}" class="" >
+                <div class="">
+                    NOMBRE:</br> 
+                    <input type="text" class=""  name="nombre"></br>
+                </div>
+                <div class="">
+                    EMAIL:</br> 
+                <input type="text" class=""  name="email"></br>
+                </div>
+                <div class="">
+                    PASSWORD:</br> 
+                    <input type="text" class=""  name="password"></br>
+                </div>
+                <!--<div class="">
+                    ROL:</br> 
+                    <select name="rol" id="rol" >
+                        <option>admin</option>
+                        <option>aux</option>  
+                        </br>
+                    </select>
+
+                </div>-->
+                
+                <div class="">
+                    <label>ROL</label></br>
+                    <select  name="nombrerol" class="" multiple="true">
+                        <option th:each="tipo :${Listarol}" th:value="${tipo.id}" th:text="${tipo.nombrerol}" />
+                    </select>                
+                </div>
+ 
+                
+                </div>
+                    <button class="" >Guardar</button>
+                </div>
+               
+            </form>                        
+        </div>
+    </body>
+</html>

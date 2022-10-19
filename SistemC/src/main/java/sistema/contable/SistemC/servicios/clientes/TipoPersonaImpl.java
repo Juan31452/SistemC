@@ -1,10 +1,10 @@
-package sistema.contable.SistemC.servicios.personas;
+package sistema.contable.SistemC.servicios.clientes;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sistema.contable.SistemC.modelo.personas.TipoPersona;
-import sistema.contable.SistemC.modelo.personas.TipoPersonaRepository;
+import sistema.contable.SistemC.modelo.clientes.TipoPersona;
+import sistema.contable.SistemC.modelo.clientes.TipoPersonaRepository;
 
 /**
  *

@@ -7,7 +7,7 @@
     </head>
     <body>
         <div>
-            <form method="POST"  class="" >
+            <form method="POST" th:action="@{/guardar}" class="" >
                 <div class="">
                     CC O NIT:</br> 
                     <input type="text" class=""  name="cc_nit"></br>
@@ -33,16 +33,10 @@
                     <input type="text" class=""  name="telefono"></br>  
                 </div>
                 <div class="">
-                    <label>TIPO</label></br>
-                    <select  name="tipos" class="" multiple="true">
-                        <option th:each="tipo :${Listatipo}" th:value="${tipo.idtipo}" th:text="${tipo.descripcion}" />
-                    </select>                
-                </div>
-                <div class="">
                     OBLIGACION FINANCIERA:</br> 
                     <input type="text" class=""  name="obligacionf"></br>
                 </div>
-                    <button class="">Agregar</button>
+                    <button class="">Guardar</button>
                 </div>
                
             </form>   

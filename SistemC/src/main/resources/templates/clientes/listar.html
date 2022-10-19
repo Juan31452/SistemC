@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>CLIENTES</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="main-container" class="col-12">  
+            <h1>LISTA CLIENTES</h1>
+            <br>
+            <div>
+               <h5>ADICIONAR  <a th:href="@{/adicionar}">IR</a>.</h5> 
+            </div>
+            <div>
+                <p th:text = "${mensaje}" class="" >Mensaje</p>
+            </div>
+            <table class="mitabla">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>CC_NIT</th>
+                        <th>NOMBRES</th>
+                        <th>APELLIDOS</th>
+                        <th>DIRECCION</th>
+                        <th>CORREO</th>
+                        <th>TELEFONO</th>
+                        <th>OBLIGACION</th>                                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="listac : ${listado}">
+                      <th th:text="${listac.id}"></th>
+                      <th th:text="${listac.cc_nit}"></th>
+                      <th th:text="${listac.nombres}"></th>
+                      <th th:text="${listac.apellidos}"></th>
+                      <th th:text="${listac.direccion}"></th>
+                      <th th:text="${listac.correo}"></th>
+                      <th th:text="${listac.telefono}"></th>
+                      <th th:text="${listac.obligacionf}"></th>
+                      <th>  <a th:href= "@{/editarclientes/{id}(id = ${listac.id})}"> Editar </a></th>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+</html>

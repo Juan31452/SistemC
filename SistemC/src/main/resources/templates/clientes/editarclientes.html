@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <form method="POST" th:action="@{/guardar}" th:each="cliente : ${editar}" class="" >
+                <div class="">
+                    ID:</br> 
+                    <input type="hidden" th:value = "${cliente.id}"  class="" name="id" ></br>               
+                    CC O NIT:</br> 
+                    <input type="text" th:value = "${cliente.cc_nit}" class=""  name="cc_nit"></br>
+                </div>
+                <div class="">
+                    NOMBRES:</br> 
+                <input type="text" th:value = "${cliente.nombres}" class=""  name="nombres"></br>
+                </div>
+                <div class="">
+                    APELLIDOS:</br> 
+                    <input type="text" th:value = "${cliente.apellidos}" class=""  name="apellidos"></br>
+                </div>
+                <div class="">
+                    DIRECCION:</br> 
+                    <input type="text" th:value = "${cliente.direccion}" class=""  name="direccion"></br>
+                </div>
+                <div class="">
+                    CORREO:</br> 
+                    <input type="text" th:value = "${cliente.correo}" class=""  name="correo"></br>
+                </div>
+                <div class="">
+                    TELEFONO:</br> 
+                    <input type="text" th:value = "${cliente.telefono}" class=""  name="telefono"></br>  
+                </div>
+                <div class="">
+                    OBLIGACION FINANCIERA:</br> 
+                    <input type="text" th:value = "${cliente.obligacionf}" class=""  name="obligacionf"></br>
+                </div>
+                    <button class="">Actualizar</button>
+                </div>
+               
+            </form>   
+  
+        </div>
+    </body>
+</html>
