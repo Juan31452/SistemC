@@ -43,9 +43,12 @@ public class ClientesImpl implements ClientesServicio
     }
 
     @Override
-    public List<Clientes> eliminararclientes(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void deleteClienteById(Long id) 
+    {
+        clientesr.deleteById(id);
     }
 
+
+    
     
 }

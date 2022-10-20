@@ -39,7 +39,7 @@
                       <th th:text="${listac.telefono}"></th>
                       <th th:text="${listac.obligacionf}"></th>
                       <th>  <a th:href= "@{/editarclientes/{id}(id = ${listac.id})}"> Editar </a></th>
-
+                      <th>  <a th:href= "@{/eliminarclientes/{id}(id = ${listac.id})}"> Eliminar </a></th>
                     </tr>
                 </tbody>
             </table>

@@ -11,7 +11,7 @@ public interface ClientesServicio {
     List<Clientes> ListarTodos();
     Clientes guardarclientes(Clientes clientes);
     List<Clientes> editarclientes(Long id);
-    List<Clientes> eliminararclientes(Long id);
-    
+    //public void eliminarcliente(Long id);
+    void deleteClienteById(Long id);
     
 }
